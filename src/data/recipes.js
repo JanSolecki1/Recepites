@@ -1,0 +1,138 @@
+import cookies from '../assets/cookies.jpg';
+import blackbread from '../assets/black-bread.jpg';
+import applepie from '../assets/apple-pie.jpg';
+import cinnamonrolls from '../assets/cinnamon-rolls.jpg';
+import blueberrymuffins from '../assets/blueberry-muffins.jpg';
+
+const recipes = [
+  {
+    id: 1,
+    title: 'Black Bread',
+    image: blackbread, 
+    tags: ['Bread', 'Baking'],
+    ingredients: [
+      { quantity: '500g', name: 'Rye flour' },
+      { quantity: '250ml', name: 'Water' },
+      { quantity: '1 tbsp', name: 'Molasses' },
+      { quantity: '1 tsp', name: 'Salt' },
+      { quantity: '7g', name: 'Yeast' },
+    ],
+    instructions: [
+      'Mix the rye flour, yeast, and salt in a bowl.',
+      'Dissolve molasses in warm water and add to the flour mixture.',
+      'Knead the dough and let it rise for 2 hours.',
+      'Shape into a loaf and bake at 200°C (400°F) for 35 minutes.',
+    ],
+    prepTime: '2 hours 15 minutes',
+    cookTime: '35 minutes',
+    totalTime: '2 hours 50 minutes',
+    servings: 6,
+    nutrition: '180 calories per slice',
+  },
+  {
+    id: 2,
+    title: 'Chocolate Chip Cookies',
+    image: cookies, 
+    tags: ['Dessert', 'Cookies', 'Baking'],
+    ingredients: [
+      { quantity: '200g', name: 'Flour' },
+      { quantity: '100g', name: 'Butter' },
+      { quantity: '100g', name: 'Brown sugar' },
+      { quantity: '50g', name: 'White sugar' },
+      { quantity: '1', name: 'Egg' },
+      { quantity: '1 tsp', name: 'Vanilla extract' },
+      { quantity: '1/2 tsp', name: 'Baking soda' },
+      { quantity: '100g', name: 'Chocolate chips' },
+    ],
+    instructions: [
+      'Preheat oven to 180°C (350°F).',
+      'Cream together butter and sugars.',
+      'Add egg and vanilla, then mix in dry ingredients.',
+      'Fold in chocolate chips.',
+      'Scoop dough onto a baking sheet and bake for 10-12 minutes.',
+    ],
+    prepTime: '15 minutes',
+    cookTime: '12 minutes',
+    totalTime: '27 minutes',
+    servings: 12,
+    nutrition: '150 calories per cookie',
+  },
+  {
+    id: 3,
+    title: 'Apple Pie',
+    image: applepie, 
+    tags: ['Dessert', 'Pie', 'Baking'],
+    ingredients: [
+      { quantity: '6', name: 'Apples (peeled and sliced)' },
+      { quantity: '200g', name: 'Sugar' },
+      { quantity: '1 tbsp', name: 'Cinnamon' },
+      { quantity: '1 tbsp', name: 'Lemon juice' },
+      { quantity: '250g', name: 'Pie crust' },
+    ],
+    instructions: [
+      'Preheat oven to 200°C (400°F).',
+      'Mix apples with sugar, cinnamon, and lemon juice.',
+      'Fill pie crust with apple mixture and top with second crust.',
+      'Cut slits in the top crust and bake for 45 minutes.',
+    ],
+    prepTime: '20 minutes',
+    cookTime: '45 minutes',
+    totalTime: '1 hour 5 minutes',
+    servings: 8,
+    nutrition: '300 calories per slice',
+  },
+  {
+    id: 4,
+    title: 'Cinnamon Rolls',
+    image: cinnamonrolls, 
+    tags: ['Dessert', 'Breakfast', 'Baking'],
+    ingredients: [
+      { quantity: '500g', name: 'Flour' },
+      { quantity: '1 packet', name: 'Yeast' },
+      { quantity: '200ml', name: 'Milk' },
+      { quantity: '100g', name: 'Butter' },
+      { quantity: '100g', name: 'Sugar' },
+      { quantity: '2 tsp', name: 'Cinnamon' },
+    ],
+    instructions: [
+      'Activate yeast in warm milk for 5 minutes.',
+      'Mix flour, sugar, and cinnamon, then add yeast mixture and butter.',
+      'Knead dough and let it rise for 1 hour.',
+      'Roll out dough, spread with butter and cinnamon sugar, and cut into rolls.',
+      'Bake at 180°C (350°F) for 25-30 minutes.',
+    ],
+    prepTime: '1 hour 30 minutes',
+    cookTime: '30 minutes',
+    totalTime: '2 hours',
+    servings: 12,
+    nutrition: '250 calories per roll',
+  },
+  {
+    id: 5,
+    title: 'Blueberry Muffins',
+    image: blueberrymuffins, 
+    tags: ['Dessert', 'Breakfast', 'Baking'],
+    ingredients: [
+      { quantity: '250g', name: 'Flour' },
+      { quantity: '100g', name: 'Sugar' },
+      { quantity: '2 tsp', name: 'Baking powder' },
+      { quantity: '1/2 tsp', name: 'Salt' },
+      { quantity: '2', name: 'Eggs' },
+      { quantity: '100ml', name: 'Milk' },
+      { quantity: '100g', name: 'Blueberries' },
+    ],
+    instructions: [
+      'Preheat oven to 180°C (350°F).',
+      'Mix dry ingredients in one bowl and wet ingredients in another.',
+      'Combine both mixtures and fold in blueberries.',
+      'Scoop batter into muffin tin and bake for 20 minutes.',
+    ],
+    prepTime: '10 minutes',
+    cookTime: '20 minutes',
+    totalTime: '30 minutes',
+    servings: 12,
+    nutrition: '180 calories per muffin',
+  }
+];
+
+export default recipes;

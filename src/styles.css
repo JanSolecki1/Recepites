@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+/* Global Styles */
+:root {
+  --primary-color: #ff7f50; 
+  --secondary-color: #333;
+  --background-gradient: linear-gradient(135deg, #fff3e6 0%, #ffe6cc 100%);
+  --font-family: 'Work Sans', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--background-gradient);
+  color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color); /* Orange background */
+  color: white;
+  border: 2px solid var(--primary-color); /* Orange border */
+  border-radius: 8px; /* Rounded corners */
+  font-family: var(--font-family);
+  font-size: 1em; /* Larger font size */
+  cursor: pointer;
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
+  margin-right: 10px; /* Add margin to create a gap between buttons */
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #ff6347; /* Darker orange on hover */
+  border-color: #ff6347; /* Darker orange on hover */
+}
+
+form {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+
+form input,
+form textarea,
+form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid var(--primary-color); /* Orange border */
+  border-radius: 8px; /* Rounded corners */
+  font-family: var(--font-family);
+  font-size: 1em; /* Larger font size */
+  outline: none; /* Remove default outline */
+  transition: border-color var(--transition-speed);
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #ff6347; /* Darker orange on focus */
+}
+
+form textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+form button {
+  width: auto; /* Allow button to shrink/grow as needed */
+}
+
+h2 {
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5em;
+}
+
+/* END of Global Styles */
+
+/* Header Styles */
+header {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 7em; /* Add some space below the header */
+}
+
+header h1 {
+  font-size: 5em;
+  margin: 0;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+header nav.left-nav {
+  margin-right: auto; /* Pushes the left nav to the left */
+}
+
+header nav.right-nav {
+  margin-left: auto; /* Pushes the right nav to the right */
+}
+
+header nav a {
+  font-weight: 700;
+  color: var(--secondary-color);
+  position: relative;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width var(--transition-speed);
+}
+
+header nav a:hover::after,
+header nav a.active::after {
+  width: 100%;
+}
+
+/* End of Header */
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  bottom: 5px; /* Add 20px space from the bottom */
+  right: 5px; /* Add 20px space from the right */
+  padding: 10px 20px;
+  text-align: right;
+  z-index: 1000;
+}
+
+footer p {
+  margin: 0;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+/* END of Footer Styles */
+
+/* Message Styles (on Contact and About Page) */
+.message {
+  font-size: 2em;
+  padding: 30px;
+  border: 5px solid var(--primary-color); /* Orange border */
+  border-radius: 15px; /* More rounded corners */
+  background-color: #fff3e6;
+  color: var(--secondary-color); /* Text color */
+  max-width: 70%;
+  margin: 50px auto 0; /* Added 50px margin at the top */
+  box-shadow: 0 8px 20px rgba(255, 165, 0, 0.3); /* Vibrant shadow matching the border */
+  font-family: 'Arial Black', sans-serif; /* Bold font */
+  letter-spacing: 2px; /* Spaced-out letters */
+  text-align: center;
+  word-wrap: break-word; /* Prevent text overflow */
+}
+
+/* END of Message Styles */
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Gap between search bar and tag button */
+  margin-left: 20px; /* Push the container to the right */
+  margin-bottom: 5px; /* Add some space below the container */
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 10px; /* Gap between input and select */
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 10px;
+  border: 2px solid var(--primary-color); /* Orange border */
+  border-radius: 8px; /* Rounded corners */
+  font-family: var(--font-family);
+  font-size: 1em; /* Larger font size */
+  outline: none; /* Remove default outline */
+}
+
+.search-bar input:focus,
+.search-bar select:focus {
+  border-color: #ff6347; /* Darker orange on focus */
+}
+
+/* END of Search Container */
+
+/* Recipe Box Styles (used in Recipe pages) */
+.recipe-box {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.recipe-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recipe-box .tags {
+  margin: 8px 0;
+}
+
+.recipe-box .tag {
+  display: inline-block;
+  border: 2px solid var(--primary-color); /* Orange border */
+  margin-right: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.recipe-box h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-size: 1.3em;
+}
+
+.recipe-box .recipe-details {
+  margin-top: 16px;
+}
+
+recipe-box .recipe-details h4 {
+  color: var(--primary-color);
+}
+
+/* END of Recipe Box Styles */
+
+/* Recipes Grid */
+.recipes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+/* END of Recipes Grid */
+
+/* Favorite Recipe Form Styles (used in Favorite pages) */
+.favorite-recipe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-recipe-form input[type="text"],
+.favorite-recipe-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid var(--primary-color); /* Orange border */
+  border-radius: 8px; /* Rounded corners */
+  font-family: var(--font-family);
+}
+
+.favorite-recipe-form input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.favorite-recipe-form button {
+  width: auto; /* Allow button to shrink/grow as needed */
+}
+
+/* END of Favorite Recipe Form Styles */
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 3em; /* Slightly smaller font size for tablets */
+  }
+
+  header nav a {
+    font-size: 1em; /* Smaller font size for navigation links */
+  }
+
+  .message {
+    font-size: 1.5em; /* Smaller font size for tablets */
+    padding: 20px; /* Less padding for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack header elements vertically */
+    padding: 10px;
+  }
+
+  header h1 {
+    position: static; /* Remove absolute positioning */
+    transform: none;
+    text-align: center;
+    margin-bottom: 10px; /* Add space below the title */
+    font-size: 2.5em; /* Smaller font size for mobile */
+  }
+
+  header nav.left-nav,
+  header nav.right-nav {
+    margin: 0; /* Reset margins */
+    justify-content: center; /* Center the navigation links */
+  }
+
+  header nav {
+    flex-wrap: wrap; /* Allow links to wrap to the next line */
+    gap: 30px; /* Reduce gap between links */
+  }
+
+  header nav a {
+    font-size: 0.9em; /* Smaller font size for mobile */
+  }
+
+  .message {
+    font-size: 1.2em; /* Smaller font size for mobile */
+    padding: 15px; /* Less padding for mobile */
+    max-width: 90%; /* Allow more width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em; /* Even smaller font size for very small screens */
+  }
+
+  header nav {
+    gap: 20px; /* Reduce gap between links further */
+  }
+
+  header nav a {
+    font-size: 0.8em; /* Smaller font size for very small screens */
+  }
+
+  .message {
+    font-size: 1em; /* Smaller font size for very small screens */
+    padding: 10px; /* Less padding for very small screens */
+    max-width: 95%; /* Allow more width for very small screens */
+  }
+}
+
+/* END of Media Queries */
